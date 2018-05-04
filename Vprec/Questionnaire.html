@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Questionnaire</title>
+    </head>
+
+    <body>
+<p>Et voilà le gros questionnaire </p>
+<?php echo "Ceci est du texte"; ?>
+
+<form method="post" action="traitement.php">
+
+<!-- Identification -->
+   <p> 
+      <label for="pseudo"> Mais t'es qui ? </label> : <br />
+    <input type="text" name="pseudo" id="pseudo" placeholder="ex: Ranou" autofocus  required  />
+  </p>
+
+<!-- Poids -->
+   <p> 
+      <label for="poids">Quel sera son poids </label> : <br />
+  <input type="range" name="weight" id="range_weight" value="0" min="0" max="5" step="0.05" oninput="range_weight_disp.value = range_weight.value">
+   <output  id="range_weight_disp"></output>
+  </p>
+
+<!-- Date de naissance -->
+   <p> 
+      <label for="date_n">Quel sera la date de naissance </label> : <br />
+    <input type="date" "  required  />
+       <output  id="poids_disp"></output>
+  </p>
+
+
+<!-- Sexe -->
+   <p>
+       Quel sera le sexe (une seule solution possible) :<br />
+       <input type="radio" name="sexe" value="Garçon" id="Gars" checked="checked" /> <label for="Gars">Garçon</label><br />
+       <input type="radio" name="sexe" value="Fille" id="Fille" /> <label for="Fille">Fille</label><br />
+      
+
+   </p>
+
+<br />
+
+<!-- Validation -->
+   <input type="submit" value="Envoyer" />
+
+</form>
+
+
+    </body>
+</html>
