@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Pronos Korri</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style_V3.css" />
+  <link rel="stylesheet" href="style.css" />
 
   <style>
     
@@ -20,16 +20,16 @@
 
                         
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+     <!--  <a class="navbar-brand" href="#">Logo</a> -->
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
        
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+       <!--<ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+      </ul>-->
     </div>
   </div>
 </nav>
@@ -37,37 +37,38 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+      <!-- <p><a href="#">Link</a></p>-->
+      <!-- <p><a href="#">Link</a></p>-->
+     <!--  <p><a href="#">Link</a></p>-->
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
+      <h1>Voici le formulaire :</h1>
   
   
-<form method="post" action="cible_V3.php">
+<form method="post" action="cible.php">
 
 <!-- Identification -->
    <p> 
-      <label for="pseudo"> Mais t'es qui ? </label> : <br />
+      <label for="pseudo"> Mais avant de commencer, t'es qui ? </label> : <br />
     <input type="text" name="pseudo" id="pseudo" placeholder="ex: Ranou" autofocus  required  />
   </p>
-
 <!-- Sexe -->
    <p>
-       Quel sera le sexe (une seule solution possible cela s'entend) :<br />
+       Quel sera le sexe du futur nouveau né (une seule solution possible cela s'entend) :<br />
        <input type="radio" name="sexe" value="Garcon" id="Gars" checked="checked" /> <label for="Gars">Garçon</label><br />
        <input type="radio" name="sexe" value="Fille" id="Fille" /> <label for="Fille">    Fille</label><br /> 
      <input type="radio" name="sexe" value="Hermaphrodite" id="Hermaphrodite" /> <label for="Hermaphrodite">Hermaphrodite</label><br /> 
    </p>
-
 <!-- Prénom -->
    <p> 
-      <label for="prenom"> Quel sera le prénom ? </label> : <br />
+      <label for="prenom"> Quel sera son prénom ? </label> : <br />
     <input type="text" name="prenom" id="prenom" placeholder="ex: Riroux"   required  />
   </p>
-
-
+<!-- Date de naissance -->
+   <p> 
+      <label for="date_n">Quel sera sa date de naissance </label> : <br />
+    <input type="date"  name="date_n" id="date_n" required  />
+  </p>
 <!-- Poids -->
    <p> 
       <label for="weight">Quel sera son poids (en kg)</label> : <br />
@@ -75,25 +76,19 @@
    <output  id="range_weight_disp"></output>
   </p>
 
-<!-- Date de naissance -->
-   <p> 
-      <label for="date_n">Quel sera la date de naissance </label> : <br />
-    <input type="date"  name="date_n" id="date_n" required  />
-  </p>
-
 <!-- Validation -->
-   <input type="submit" value="Envoyer" />
+   <input type="submit"  class="btn btn-default" value="Envoyer" />
 
 </form>
 
 
     </div>
     <div class="col-sm-2 sidenav">
-      <div class="well">
+      <!--<div class="well">
         <p>ADS</p>
       </div>
       <div class="well">
-        <p>ADS</p>
+        <p>ADS</p> -->
       </div>
     </div>
   </div>
