@@ -14,14 +14,12 @@
 
 
 <?php
+
   include('secure/config.php');
 
 try
 {
-//$bdd = new PDO('mysql:host=localhost;dbname=bebe;charset=utf8', 'root', '');
-$bdd = new PDO('mysql:host=localhost;dbname=bebe;charset=utf8', $SQLlogin, $SQLpass);
-
-//$bdd = new PDO('mysql:host=sql.hebergeur.com;dbname=mabase;charset=utf8', 'pierre.durand', 's3cr3t');
+$bdd = new PDO('mysql:host='.$SQLhost.';dbname='.$SQLBase.';charset=utf8', $SQLlogin, $SQLpass);
 }
 catch (Exception $e)
 {
@@ -33,12 +31,13 @@ catch (Exception $e)
 <!-- Insertion des données dans la BDD -->
 
 <?php
-$req = $bdd->prepare('INSERT INTO prediction_V0(PSEUDO, SEXE ,  PRENOM , POIDS , DATE_N)
-					   VALUES(:PSEUDO, :SEXE, :PRENOM , :POIDS , :DATE_N )');
+$req = $bdd->prepare('INSERT INTO prediction_V0(PSEUDO, SEXE ,  PRENOM , PRENOM2 ,  POIDS , DATE_N)
+					   VALUES(:PSEUDO, :SEXE, :PRENOM ,  :PRENOM2 , :POIDS , :DATE_N )');
 $req->execute(array(
     'PSEUDO' => $_POST['pseudo'],
     'SEXE' => $_POST['sexe'],
     'PRENOM' => $_POST['prenom'],
+    'PRENOM2' => $_POST['prenom2'],
     'POIDS' => $_POST['weight'],
     'DATE_N' => $_POST['date_n']
     ));
@@ -93,6 +92,7 @@ $reponse = $bdd->query('SELECT * FROM prediction_V0');
       <tr>
        <th>Sexe</th>
        <th>Prénom</th>
+       <th>Prénom 2</th>
        <th>Poids</th>
        <th>Date de naissance</th>
       </tr>
@@ -101,6 +101,7 @@ $reponse = $bdd->query('SELECT * FROM prediction_V0');
       <tr>
        <td><?php echo $_POST['sexe']; ?></td>
        <td><?php echo $_POST['prenom']; ?></td>
+       <td><?php echo $_POST['prenom2']; ?></td>
        <td><?php echo $_POST['weight']; ?> kg  </td>
        <td><?php echo $_POST['date_n']; ?></td>
       </tr>

@@ -64,6 +64,12 @@
       <label for="prenom"> Quel sera son prénom ? </label> : <br />
     <input type="text" name="prenom" id="prenom" placeholder="ex: Riroux"   required  />
   </p>
+
+<!-- Prénom 2 -->
+   <p> 
+      <label for="prenom2"> Quel sera son prénom (2ème chance) ? </label> : <br />
+    <input type="text" name="prenom2" id="prenom2" placeholder="ex: Rirou"   required  />
+  </p>
 <!-- Date de naissance -->
    <p> 
       <label for="date_n">Quel sera sa date de naissance </label> : <br />
