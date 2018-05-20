@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="css/style.css" /> 
   <style>
   
   </style>
@@ -81,9 +81,9 @@ $reponse = $bdd->query('SELECT * FROM prediction_V0');
 	
 	
     <div class="col-sm-8 text-left"> 
-      <h1>Prono réalisé</h1>
+   <br />
   
-  <p>Voici le tableau récapitulatif de tes prédictions   </p>     
+  <p>Voici le tableau récapitulatif de tes prédictions : </p>     
 <div class="container">
 
    
@@ -115,7 +115,10 @@ $reponse = $bdd->query('SELECT * FROM prediction_V0');
 </div>
 
 <div  id="conclusion">
-<p>Mais bon, je ne te sens pas trop sûr de toi. Si tu veux revenir en arrière, <a href="traitement.php">clique ici </a> pour revenir au formulaire</p>
+<p>Mais bon, je ne te sens pas trop sûr de toi. Si tu veux revenir en arrière, <a href="traitement.php">clique ici </a> pour revenir au formulaire. </p>   
+<p>Attention, seuls les derniers pronos envoyés sont pris en compte. </p>
+<p> La date de clotûre est au 27 mai 2018. </p>
+
 </div>
 
     </div>
