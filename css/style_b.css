@@ -6,7 +6,7 @@
 
 	/* Ajout de l'image */
     #principal {
-  background: url(Images/Korri3.jpg)   ;
+  background: url(../Images/Korri3.jpg)   ;
    background-position: right;
    background-repeat: no-repeat;
 }
