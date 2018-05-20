@@ -1,5 +1,6 @@
 # PronoBaby
 Pronos pour naissances
+Version en ligne
 
 ## Contenu
 2 pages se succèdent
@@ -7,4 +8,4 @@ Pronos pour naissances
 * Le récapitulatif des pronos
 
 ## To Do
-* Mettre en ligne
+* Changer nom de domaine
